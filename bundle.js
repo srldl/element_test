@@ -13,7 +13,7 @@ module.exports = elementCtrl;
 
 'use strict';
 
-var elementDirective = function() {
+var elementDirective = function($compile) {
   return {
       restrict: 'AE',
       replace: 'true',
@@ -21,12 +21,18 @@ var elementDirective = function() {
       templateUrl: './button.html',
 
       link: function(scope, elem, attrs) {
- 		// Execute this function when advanced search button is pressed
- 		scope.submit = function() {
+      			 console.log("got link");
+
+
+ 		scope.add = function() {
      			console.log(scope);
+     			elem.after($compile('<elem />')(scope));
  	    };
 
- 		 console.log("dir");
+ 	    scope.rem = function() {
+     			console.log(scope);
+     			elem.remove($compile('<elem />')(scope));
+ 	    };
 
   }
 }
