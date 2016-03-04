@@ -1,0 +1,31 @@
+{
+  "name": "element_test",
+  "version": "0.0.1",
+  "description": "Add and delete elements in the DOM model",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -a vimsa.npolar.no -p 8000 -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srldl/element_test.git"
+  },
+  "keywords": [
+    "element",
+    "DOM"
+  ],
+  "author": "srldl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/srldl/element_test/issues"
+  },
+  "homepage": "https://github.com/srldl/element_test#readme",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "http-server": "^0.8.5"
+  },
+  "dependencies": {
+    "angular": "^1.5.0"
+  }
+}
